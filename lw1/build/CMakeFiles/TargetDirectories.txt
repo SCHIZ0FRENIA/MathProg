@@ -1,0 +1,3 @@
+C:/Users/User/Documents/2.2/МП/lw1/build/CMakeFiles/Auxil.dir
+C:/Users/User/Documents/2.2/МП/lw1/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/User/Documents/2.2/МП/lw1/build/CMakeFiles/ZERO_CHECK.dir
