@@ -19,4 +19,9 @@ namespace auxil
     {
         return (int) dget(rmin, rmax);
     }
+
+    unsigned int  fact (unsigned int x )
+    {
+        return ( x == 0 ) ? 1 : (x * fact(x-1)); 
+    };
 }

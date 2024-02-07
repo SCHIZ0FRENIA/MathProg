@@ -4,7 +4,6 @@ namespace subset
 {
     struct subset
     {
-        public:
             short n, sn;
             subset(short n)
             {
@@ -48,7 +47,6 @@ namespace subset
             {
                 return (unsigned int) (1<<this -> n);
             }
-        private: 
             short *sbset;
             unsigned int mask;
     };

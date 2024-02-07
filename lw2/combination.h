@@ -1,17 +1,17 @@
 #pragma once 
-namespace combinations
+
+namespace combi
 {
-    struct Combinations
+    struct Combination
     {
-        public:
             short m, n;
-            Combinations(short n, short m)
+            Combination(short n, short m)
             {
                 this -> n = n;
                 this -> m = m;
                 this -> sbset = new short[m+2];
                 this -> reset();
-            }
+            };
             
             void reset()
             {
@@ -49,7 +49,16 @@ namespace combinations
             {
                 return this -> sbset[i];
             };
-        private:
+
+            unsigned int  fact (unsigned int x )
+            {
+                return ( x == 0 ) ? 1 : (x * fact(x-1)); 
+            };
+
+            unsigned int count()
+            {
+                return (this->n >= this->m)?fact(this->n)/(fact(this->n-this->m)*fact(this->m)):0;    
+            };
             short *sbset;
     };
 }

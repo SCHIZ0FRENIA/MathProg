@@ -9,6 +9,9 @@ set(SOURCES
 set(HEADERS
     subset.h
     combination.h
+    permutation.h
+    accomodation.h
+    salesman.h
 )
 
 add_executable(Combi ${SOURCES} ${HEADERS})
