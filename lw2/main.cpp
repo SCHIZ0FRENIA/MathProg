@@ -1,9 +1,11 @@
 #include <iostream> 
+#include <vector> 
 #include "subset.h"
 #include "combination.h"
 #include "permutation.h"
 #include "accomodation.h"
 #include "salesman.h"
+#include <ctime>
 #define N (sizeof(AA)/2)
 #define M 3
 
@@ -132,7 +134,7 @@ void SalesmanDemo()
     {
         for(int o = 0; o < 10; o++)
         {
-            d[i][o] = rand() % 100;
+            d[i][o] = rand() % 290 + 10;
         }
     }
 
@@ -157,7 +159,187 @@ void SalesmanDemo()
     std::cout<<0;
     std::cout<<std::endl<<"-- Path length     : "<<s;  
     std::cout<<std::endl;
+}
 
+void SalesmanTimeDemo()
+{
+
+    clock_t Time1, Time2;
+    int CYCLE = 100;
+
+    Time1 = clock();
+
+    for (int o = 0; o < CYCLE; o++)
+    {
+        int Length = 6;
+        srand ( (unsigned int) time(NULL));
+
+        int d[6][6];
+
+        for( int i = 0; i < Length; i++)
+        {
+            for(int o = 0; o < Length; o++)
+            {
+                d[i][o] = rand() % 290 + 10;
+            }
+        }
+
+        int r[6];
+        int s = salesman (Length, (int*)d, r);
+    }
+
+    Time2 = clock();
+
+    std::cout << Time2 - Time1 << ' ';
+ 
+    Time1 = clock();
+
+    for (int o = 0; o < CYCLE; o++)
+    {
+        int Length = 7;
+        srand ( (unsigned int) time(NULL));
+
+        int d[7][7];
+
+        for( int i = 0; i < Length; i++)
+        {
+            for(int o = 0; o < Length; o++)
+            {
+                d[i][o] = rand() % 290 + 10;
+            }
+        }
+
+        int r[7];
+        int s = salesman (Length, (int*)d, r);
+    }
+
+    Time2 = clock();
+
+    std::cout << Time2 - Time1 << ' ';
+    Time1 = clock();
+
+    for (int o = 0; o < CYCLE; o++)
+    {
+        int Length = 8;
+        srand ( (unsigned int) time(NULL));
+
+        int d[8][8];
+
+        for( int i = 0; i < Length; i++)
+        {
+            for(int o = 0; o < Length; o++)
+            {
+                d[i][o] = rand() % 290 + 10;
+            }
+        }
+
+        int r[8];
+        int s = salesman (Length, (int*)d, r);
+    }
+
+    Time2 = clock();
+
+    std::cout << Time2 - Time1 << ' ';
+    
+    Time1 = clock();
+
+    for (int o = 0; o < CYCLE; o++)
+    {
+        int Length = 9;
+        srand ( (unsigned int) time(NULL));
+
+        int d[9][9];
+
+        for( int i = 0; i < Length; i++)
+        {
+            for(int o = 0; o < Length; o++)
+            {
+                d[i][o] = rand() % 290 + 10;
+            }
+        }
+
+        int r[9];
+        int s = salesman (Length, (int*)d, r);
+    }
+
+    Time2 = clock();
+
+    std::cout << Time2 - Time1 << ' ';
+    
+    Time1 = clock();
+
+    for (int o = 0; o < CYCLE; o++)
+    {
+        int Length = 10;
+        srand ( (unsigned int) time(NULL));
+
+        int d[10][10];
+
+        for( int i = 0; i < Length; i++)
+        {
+            for(int o = 0; o < Length; o++)
+            {
+                d[i][o] = rand() % 290 + 10;
+            }
+        }
+
+        int r[10];
+        int s = salesman (Length, (int*)d, r);
+    }
+
+    Time2 = clock();
+
+    std::cout << Time2 - Time1 << ' ';
+    
+    Time1 = clock();
+
+    for (int o = 0; o < CYCLE; o++)
+    {
+        int Length = 11;
+        srand ( (unsigned int) time(NULL));
+
+        int d[11][11];
+
+        for( int i = 0; i < Length; i++)
+        {
+            for(int o = 0; o < Length; o++)
+            {
+                d[i][o] = rand() % 290 + 10;
+            }
+        }
+
+        int r[11];
+        int s = salesman (Length, (int*)d, r);
+    }
+
+    Time2 = clock();
+
+    std::cout << Time2 - Time1 << ' ';
+    
+    Time1 = clock();
+
+    for (int o = 0; o < CYCLE; o++)
+    {
+        int Length = 12;
+        srand ( (unsigned int) time(NULL));
+
+        int d[12][12];
+
+        for( int i = 0; i < Length; i++)
+        {
+            for(int o = 0; o < Length; o++)
+            {
+                d[i][o] = rand() % 290 + 10;
+            }
+        }
+
+        int r[12];
+        int s = salesman (Length, (int*)d, r);
+    }
+
+    Time2 = clock();
+
+    std::cout << Time2 - Time1 << ' ';    
 }
 
 int main()
@@ -166,6 +348,7 @@ int main()
     // CombinationDemo();
     // PermutationDemo();
     // AccomodationDemo();
-    SalesmanDemo();
+    // SalesmanDemo();
+    // SalesmanTimeDemo();
     return 0;
 }

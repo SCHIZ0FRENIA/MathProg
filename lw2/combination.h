@@ -59,6 +59,7 @@ namespace combi
             {
                 return (this->n >= this->m)?fact(this->n)/(fact(this->n-this->m)*fact(this->m)):0;    
             };
+            
             short *sbset;
     };
 }
